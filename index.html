@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Selection - JohnLC Studios</title>
+    <style>
+        :root {
+            --md-sys-color-primary: #6750A4;
+            --md-sys-color-on-primary: #FFFFFF;
+            --md-sys-color-primary-container: #EADDFF;
+            --md-sys-color-on-primary-container: #21005E;
+            --md-sys-color-surface: #FFFBFE;
+            --md-sys-color-on-surface: #1C1B1F;
+            --md-sys-color-surface-container: #F7F2FA;
+            --md-sys-color-outline: #79747E;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
+            background-color: var(--md-sys-color-surface);
+            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif;
+            color: var(--md-sys-color-on-surface);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            flex: 1;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 48px 24px;
+        }
+
+        h1 {
+            font-size: 40px;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            margin-bottom: 32px;
+            text-align: center;
+        }
+
+        .games-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+            margin-bottom: 48px;
+        }
+
+        .game-card {
+            background-color: var(--md-sys-color-surface-container);
+            border-radius: 20px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            color: inherit;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .game-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+        }
+
+        .game-image {
+            width: 100%;
+            height: 200px;
+            background-color: var(--md-sys-color-primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 48px;
+            color: var(--md-sys-color-on-primary);
+        }
+
+        .game-info {
+            padding: 24px;
+        }
+
+        .game-title {
+            font-size: 24px;
+            font-weight: 600;
+            margin: 0 0 8px;
+        }
+
+        .game-description {
+            font-size: 16px;
+            line-height: 1.5;
+            color: var(--md-sys-color-outline);
+            margin: 0;
+        }
+
+        footer {
+            background-color: var(--md-sys-color-surface-container);
+            padding: 24px;
+            text-align: center;
+            font-size: 14px;
+            color: var(--md-sys-color-outline);
+            box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 32px 16px;
+            }
+
+            h1 {
+                font-size: 32px;
+            }
+
+            .games-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Select a Game</h1>
+        <div class="games-grid">
+            <a href="pong.html" class="game-card">
+                <div class="game-image">🏓</div>
+                <div class="game-info">
+                    <h2 class="game-title">Pong</h2>
+                    <p class="game-description">Classic table tennis game. Play against AI or challenge a friend!</p>
+                </div>
+            </a>
+            <a href="snake.html" class="game-card">
+                <div class="game-image">🐍</div>
+                <div class="game-info">
+                    <h2 class="game-title">Snake</h2>
+                    <p class="game-description">Guide the snake, collect food, and try to achieve the highest score!</p>
+                </div>
+            </a>
+        </div>
+    </div>
+    <footer>
+        Made with ❤️ by JohnLC Studios
+    </footer>
+</body>
+</html>
